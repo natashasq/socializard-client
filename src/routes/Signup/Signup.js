@@ -50,11 +50,11 @@ const Image = styled.img`
 `;
 
 const avatars = [
-  "/img/zebra.jpg",
-  "/img/foka.jpeg",
-  "/img/lama.jpeg",
-  "/img/mungos.jpg",
-  "/img/zirafa.jpeg",
+  `${process.env.REACT_APP_API_PATH}/img/zebra.jpg`,
+  `${process.env.REACT_APP_API_PATH}/img/foka.jpeg`,
+  `${process.env.REACT_APP_API_PATH}/img/lama.jpeg`,
+  `${process.env.REACT_APP_API_PATH}/img/mungos.jpg`,
+  `${process.env.REACT_APP_API_PATH}/img/zirafa.jpeg`,
 ];
 
 function Signup({ history, location }) {
