@@ -142,7 +142,7 @@ function Signup({ history, location }) {
               active={avatar === _avatar}
               src={avatar}
               onClick={(e) => {
-                handleChange("img_url", e.currentTarget.src.slice(21));
+                handleChange("img_url", e.currentTarget.src);
                 setAvatar(avatar);
               }}
             />
