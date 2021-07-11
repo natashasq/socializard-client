@@ -49,12 +49,15 @@ const Image = styled.img`
   }};
 `;
 
+const buildAvatarUrl = (avatar) =>
+  `${process.env.REACT_APP_API_PATH}${avatar}`;
+
 const avatars = [
-  `${process.env.REACT_APP_API_PATH}/img/zebra.jpg`,
-  `${process.env.REACT_APP_API_PATH}/img/foka.jpeg`,
-  `${process.env.REACT_APP_API_PATH}/img/lama.jpeg`,
-  `${process.env.REACT_APP_API_PATH}/img/mungos.jpg`,
-  `${process.env.REACT_APP_API_PATH}/img/zirafa.jpeg`,
+  buildAvatarUrl('/img/zebra.jpg'),
+  buildAvatarUrl('/img/foka.jpeg'),
+  buildAvatarUrl('/img/lama.jpeg'),
+  buildAvatarUrl('/img/mungos.jpg'),
+  buildAvatarUrl('/img/zirafa.jpeg'),
 ];
 
 function Signup({ history, location }) {
@@ -135,6 +138,7 @@ function Signup({ history, location }) {
         <ImageWrapper>
           {avatars.map((avatar) => (
             <Image
+              key={avatar}
               active={avatar === _avatar}
               src={avatar}
               onClick={(e) => {
